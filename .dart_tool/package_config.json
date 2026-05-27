@@ -26,12 +26,6 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "json_annotation",
-      "rootUri": "file:///C:/Users/guilh/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.12.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.9"
-    },
-    {
       "name": "meta",
       "rootUri": "file:///C:/Users/guilh/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.18.2",
       "packageUri": "lib/",
@@ -54,12 +48,6 @@
       "rootUri": "file:///C:/Users/guilh/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-    },
-    {
-      "name": "teledart",
-      "rootUri": "file:///C:/Users/guilh/AppData/Local/Pub/Cache/hosted/pub.dev/teledart-0.6.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
     },
     {
       "name": "term_glyph",

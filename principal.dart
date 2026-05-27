@@ -27,10 +27,19 @@ void main() async {
 
             
 
-            print('Mensagem recebida: $texto');
+            print('Mensagem recebida: $texto'); 
+
+             // 1. Verificação do comando /start
+            if (texto == '/start') {
+              String boasVindas = 'Olá, seja bem-vindo ao DartBot! 👋\n\n'
+                  'Somos um verificador de CPF.\n'
+                  'Por favor, digite seu CPF: (exemplo: 000.000.000-00)';
+              
+              await enviarMensagem(baseUrl, chatId, boasVindas);
+            }
 
             // 2. Lógica de validação (só processa se NÃO for um comando)
-            else if (!texto.startsWith('/')) {
+            if (!texto.startsWith('/')) {
               String resposta = validarCPF(texto) 
                   ? '✅ O CPF $texto é VÁLIDO!' 
                   : '❌ O CPF $texto é INVÁLIDO.';

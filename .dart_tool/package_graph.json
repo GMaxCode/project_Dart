@@ -1,15 +1,24 @@
 {
   "roots": [
-    "meu_bot"
+    "bot_validador_cpf"
   ],
   "packages": [
     {
-      "name": "meu_bot",
+      "name": "bot_validador_cpf",
       "version": "1.0.0",
       "dependencies": [
+        "dotenv",
         "http"
       ],
       "devDependencies": []
+    },
+    {
+      "name": "dotenv",
+      "version": "4.2.0",
+      "dependencies": [
+        "args",
+        "meta"
+      ]
     },
     {
       "name": "http",
@@ -20,6 +29,16 @@
         "meta",
         "web"
       ]
+    },
+    {
+      "name": "meta",
+      "version": "1.18.2",
+      "dependencies": []
+    },
+    {
+      "name": "args",
+      "version": "2.7.0",
+      "dependencies": []
     },
     {
       "name": "web",
@@ -37,9 +56,12 @@
       ]
     },
     {
-      "name": "collection",
-      "version": "1.19.1",
-      "dependencies": []
+      "name": "async",
+      "version": "2.13.1",
+      "dependencies": [
+        "collection",
+        "meta"
+      ]
     },
     {
       "name": "typed_data",
@@ -65,6 +87,11 @@
       ]
     },
     {
+      "name": "collection",
+      "version": "1.19.1",
+      "dependencies": []
+    },
+    {
       "name": "term_glyph",
       "version": "1.2.2",
       "dependencies": []
@@ -72,19 +99,6 @@
     {
       "name": "path",
       "version": "1.9.1",
-      "dependencies": []
-    },
-    {
-      "name": "async",
-      "version": "2.13.1",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
-    },
-    {
-      "name": "meta",
-      "version": "1.18.2",
       "dependencies": []
     }
   ],

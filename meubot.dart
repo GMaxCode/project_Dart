@@ -76,3 +76,17 @@ Future<void> sendMessage(String token, int chatId, String text) async {
     print('Erro ao enviar: $e');
   }
 }
+
+bool validarCPF(String cpf) {
+  cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
+  if (cpf.length != 11 || RegExp(r'^(\d)\1*$').hasMatch(cpf)) return false;
+  List<int> numbers = cpf.split('').map((e) => int.parse(e)).toList();
+  for (int j = 9; j <= 10; j++) {
+    int sum = 0;
+    for (int i = 0; i < j; i++) sum += numbers[i] * ((j + 1) - i);
+    int res = (sum * 10) % 11;
+    if (res == 10) res = 0;
+    if (res != numbers[j]) return false;
+  }
+  return true;
+}

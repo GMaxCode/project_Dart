@@ -1,0 +1,146 @@
+# 🤖 Telegram CPF Validator — Dart
+
+Bot desenvolvido em **Dart** integrado ao **Telegram**, capaz de receber um CPF enviado pelo usuário e verificar se os dígitos verificadores estão matematicamente corretos.
+
+O projeto foi desenvolvido como prática de programação, integração com APIs e utilização de bibliotecas externas em Dart.
+
+## 🚀 Funcionalidades
+
+* 🤖 Integração com o Telegram
+* `/start` para iniciar a interação com o bot
+* 📩 Recebimento de mensagens dos usuários
+* 🔎 Validação matemática de CPF
+* ✅ Retorno informando se o CPF é válido
+* ❌ Retorno informando se o CPF é inválido
+* 🔐 Utilização de `.env` para proteger o token do bot
+
+## 🛠️ Tecnologias utilizadas
+
+* **Dart**
+* **TeleDart** — integração com a API do Telegram
+* **dotenv** — gerenciamento de variáveis de ambiente
+* **Telegram Bot API**
+* **Git e GitHub**
+
+## 📂 Estrutura do projeto
+
+```text
+project_Dart/
+├── lib/
+│   └── main.dart
+├── .env
+├── .gitignore
+├── pubspec.yaml
+└── README.md
+```
+
+> O arquivo `.env` não é enviado para o GitHub, pois contém informações sensíveis.
+
+## 🔐 Configuração
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/GMaxCode/project_Dart.git
+cd project_Dart
+```
+
+### 2. Instale as dependências
+
+```bash
+dart pub get
+```
+
+### 3. Configure o `.env`
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+tokenzin=seu_token_aqui
+```
+
+Substitua `seu_token_aqui` pelo token fornecido pelo **BotFather**.
+
+### 4. Execute o projeto
+
+```bash
+dart run
+```
+
+Se tudo estiver configurado corretamente, o terminal exibirá uma mensagem indicando que o bot está online.
+
+## 💬 Como utilizar
+
+No Telegram:
+
+1. Abra o bot.
+2. Envie `/start`.
+3. Digite um CPF.
+4. O bot realizará a validação.
+5. O resultado será retornado diretamente na conversa.
+
+Exemplo:
+
+```text
+👤 Usuário:
+/start
+
+🤖 Bot:
+Olá, Seja Bem-vindo! Digite o CPF para validação.
+
+👤 Usuário:
+529.982.247-25
+
+🤖 Bot:
+✅ O CPF é VÁLIDO!
+```
+
+## 🧠 Como funciona a validação
+
+O projeto remove caracteres que não sejam números e verifica:
+
+* se o CPF possui 11 dígitos;
+* se todos os dígitos não são iguais;
+* se os dois dígitos verificadores correspondem ao cálculo matemático do CPF.
+
+Dessa forma, o projeto consegue verificar a **validade matemática do número**, mas isso não significa que o CPF exista ou esteja registrado em uma base oficial.
+
+## 📚 O que aprendi com este projeto
+
+Este projeto foi desenvolvido para praticar conceitos importantes de desenvolvimento:
+
+* Sintaxe e lógica de programação em Dart
+* Funções
+* Estruturas condicionais
+* Loops
+* Manipulação de strings
+* Expressões regulares
+* Consumo e integração com APIs
+* Desenvolvimento de bots
+* Uso de pacotes externos
+* Variáveis de ambiente
+* Proteção de informações sensíveis
+* Git e GitHub
+
+## 🔒 Segurança
+
+O token do Telegram **não deve ser colocado diretamente no código-fonte**.
+
+Por isso, o projeto utiliza um arquivo `.env`, que está incluído no `.gitignore`:
+
+```gitignore
+.env
+.env.*
+```
+
+**Nunca publique seu token do Telegram no GitHub.**
+
+## 🎯 Objetivo
+
+O objetivo principal deste projeto é aplicar conhecimentos de **Dart, integração com APIs e lógica de programação** em uma aplicação prática, além de utilizar o projeto como parte do meu portfólio de desenvolvimento.
+
+---
+
+👨‍💻 Desenvolvido por **GMaxCode**
+
+⭐ Se este projeto foi útil ou interessante para você, considere deixar uma estrela no repositório!

@@ -13,15 +13,26 @@ void main() async {
     teledart.start();
     print('🚀 BOT ONLINE: @${botInfo.username}');
 
+
+// COMANDO /start
+    teledart.onCommand('start').listen((message) {
+      teledart.sendMessage(
+        message.chat.id,
+        'Olá, Seja Bem-vindo! Digite o CPF para validação (Ex: 000.000.000-00) 😉',
+      );
+    });
+ 
     teledart.onMessage().listen((message) {
       final String texto = message.text ?? '';
 
       if (texto.isNotEmpty && !texto.startsWith('/')) {
         if (validarCPF(texto)) {
           // Na versão 0.6.1, o sendMessage é direto no teledart
-          teledart.sendMessage(message.chat.id, '✅ O CPF $texto é VÁLIDO!');
-        } else {
-          teledart.sendMessage(message.chat.id, '❌ O CPF $texto é INVÁLIDO.');
+          teledart.sendMessage(message.chat.id, '✅ O CPF $texto é VÁLIDO!');} 
+          
+        
+         else {
+          teledart.sendMessage(message.chat.id, '❌ O CPF $texto é INVÁLIDO. Tente novamente:');
         }
       }
     });

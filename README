@@ -122,19 +122,6 @@ Este projeto foi desenvolvido para praticar conceitos importantes de desenvolvim
 * Proteção de informações sensíveis
 * Git e GitHub
 
-## 🔒 Segurança
-
-O token do Telegram **não deve ser colocado diretamente no código-fonte**.
-
-Por isso, o projeto utiliza um arquivo `.env`, que está incluído no `.gitignore`:
-
-```gitignore
-.env
-.env.*
-```
-
-**Nunca publique seu token do Telegram no GitHub.**
-
 ## 🎯 Objetivo
 
 O objetivo principal deste projeto é aplicar conhecimentos de **Dart, integração com APIs e lógica de programação** em uma aplicação prática, além de utilizar o projeto como parte do meu portfólio de desenvolvimento.
